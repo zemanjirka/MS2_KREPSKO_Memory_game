@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+
+
+#header {
+    height: 60px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+#date {
+    font-size: 1.2rem;
+    padding: 0 0 5px 30px;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.btn-warning {
+    margin-top: 10px;
+    right: 0%;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 70vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-shadow: 9px 0 10px -6px rgba(0,0,0,0.55),
+               -9px 0 10px -6px rgba(0,0,0,0.55);
+    text-align: center;
+    color: #fefefe;
+}
+
+body {
+    display: flex;
+    background: url('../images/bg_tile.png');
+    font-family: "kelly slab";
+}
+
+#footer {
+    border-top: 1px solid rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+}
