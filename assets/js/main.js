@@ -1,11 +1,18 @@
+// Target HTML elements
+
 let date = document.getElementById('date');
 let card = document.querySelectorAll('.card');
+
+
+// Target date of today
 
 let options = {day:'numeric', weekday:'long', month:'long', year: 'numeric', };
 let currentDate = new Date();
 
 date.innerHTML = currentDate.toLocaleDateString('en-US', options);
 
+
+// Get the players name
 function playerName() {
     var name = document.getElementById('name-input').value;
 
@@ -14,12 +21,19 @@ function playerName() {
     }
 }
 
+// Mechanism of the game
 let flippedCard = false;
 let firstCard, secondCard;
-let gameLock = false;
+let gameLock = true;
+let pairs = 15;
+let clicks = 0;
+
+card.forEach(cards => cards.addEventListener('click', flipOver));
+shuffle();
 
 function flipOver(){
     if (gameLock) return;
+    if (this === firstCard) return;
     
     this.classList.add('flip');
 
@@ -27,19 +41,18 @@ function flipOver(){
        
         flippedCard = true;
         firstCard = this;
-        console.log('im the first card', flippedCard, firstCard);
+    
     }else{
         flippedCard = false;
         secondCard = this;
-        console.log('im the second card', flippedCard, secondCard);
-        console.log(firstCard.dataset.carddata);
-        console.log(secondCard.dataset.carddata);
-        if(firstCard.dataset.carddata === secondCard.dataset.carddata){
-            firstCard.removeEventListener('click', flipOver);
-            secondCard.removeEventListener('click', flipOver);
+        
+        if (firstCard.dataset.carddata === secondCard.dataset.carddata) {
             
-        }else{ 
-            gameLock = true;
+           match()
+
+        } else { 
+            
+          flipBack()
         }
     }
 }
