@@ -5,7 +5,6 @@ let card = document.querySelectorAll('.card');
 
 
 // Target date of today
-
 let options = {day:'numeric', weekday:'long', month:'long', year: 'numeric', };
 let currentDate = new Date();
 
@@ -24,7 +23,7 @@ function playerName() {
 // Mechanism of the game
 let flippedCard = false;
 let firstCard, secondCard;
-let gameLock = true;
+let gameLock = false;
 let pairs = 15;
 let clicks = 0;
 
@@ -33,34 +32,52 @@ shuffle();
 
 function flipOver(){
     if (gameLock) return;
-    if (this === firstCard) return;
-    
-    this.classList.add('flip');
-
-    if(!flippedCard){
-       
+    if (this === firstCard) return
+    this.classList.add('flip')
+    if (!flippedCard) {
+        // The click #1
         flippedCard = true;
         firstCard = this;
-    
-    }else{
+    } else {
+        // The click #2
         flippedCard = false;
         secondCard = this;
-        
         if (firstCard.dataset.carddata === secondCard.dataset.carddata) {
-            
+            // Match
            match()
-
         } else { 
-            
+            // Not a match
           flipBack()
         }
     }
 }
 
-
-function reset(){
-    flippedCard = false;
-    firstCard, secondCard = [null, null];
-    card.forEach(cards => cards.addEventListener('click', flipOver));
+// Match cards 
+function match(){
+    firstCard.removeEventListener('click', flipOver);
+    secondCard.removeEventListener('click', flipOver);
+    pairs --;
 }
- card.forEach(cards => cards.addEventListener('click', flipOver));
+
+// Not match cards
+function flipBack() {
+    gameLock = true
+    clicks += 2;
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        gameLock = false;
+    }, 1600);
+}
+
+
+// Reset - new game
+function reset() {
+    flippedCard = false;
+    [firstCard, secondCard] = [null, null];
+    pairs = 15;
+    clicks = 0;
+    card.forEach(cardReset => cardReset.classList.remove('flip'));
+    card.forEach(cards => cards.addEventListener('click', flipOver));
+    shuffle();
+}
