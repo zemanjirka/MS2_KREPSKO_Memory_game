@@ -3,6 +3,7 @@
 let date = document.getElementById('date');
 let card = document.querySelectorAll('.card');
 const done = document.getElementById('done-msg');
+const clickNr = document.getElementById('clicks');
 
 
 // Target date of today
@@ -54,6 +55,7 @@ function flipOver(){
     // End game screen
     if (pairs <= 0){
         done.style.display = 'block';
+        clickNr.innerHTML = clicks + " clicks";
     }
 }
 
@@ -62,6 +64,7 @@ function match(){
     firstCard.removeEventListener('click', flipOver);
     secondCard.removeEventListener('click', flipOver);
     pairs --;
+    clicks += 2;
 }
 
 // Not match cards
@@ -78,6 +81,9 @@ function flipBack() {
 function windowClose() {
     done.style.display = 'none';
 } 
+
+// clicks count display
+clickNr.innerHTML = clicks + " clicks";
 
 // Reset - new game
 function reset() {
