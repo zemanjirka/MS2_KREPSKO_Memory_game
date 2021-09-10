@@ -2,6 +2,7 @@
 
 let date = document.getElementById('date');
 let card = document.querySelectorAll('.card');
+const done = document.getElementById('done-msg');
 
 
 // Target date of today
@@ -50,6 +51,10 @@ function flipOver(){
           flipBack()
         }
     }
+    // End game screen
+    if (pairs <= 0){
+        done.style.display = 'block';
+    }
 }
 
 // Match cards 
@@ -70,6 +75,9 @@ function flipBack() {
     }, 1600);
 }
 
+function windowClose() {
+    done.style.display = 'none';
+} 
 
 // Reset - new game
 function reset() {
