@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-
+/* Small screens annoucement ------------------- */
 #smallscr {
     display: none;
     width: 100%;
     height: 100%;
     margin-top: 10%;
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
     background-color: #f0ad4e;
     margin-left: 5%;
