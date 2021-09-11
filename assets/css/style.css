@@ -103,18 +103,21 @@ body {
     font-size: 1.5rem;
     position: absolute;
     margin: auto;
-    height: 200px;
-    width: 400px;
-    left: 25%;
+    height: 300px;
+    width: 500px;
+    left: 20%;
     z-index: 10;
     border-radius: 10px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     padding-top: 40px;
     display: none;
+    text-shadow: 2px 3px 2px #000;
 }
 .closeit {
     left: 40%;
 }
+
+
 
 #footer {
     border-top: 1px solid rgba(255,255,255,0.5);

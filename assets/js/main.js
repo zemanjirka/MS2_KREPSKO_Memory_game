@@ -4,6 +4,7 @@ let date = document.getElementById('date');
 let card = document.querySelectorAll('.card');
 const done = document.getElementById('done-msg');
 const clickNr = document.getElementById('clicks');
+const winMsg = document.getElementById('win-msg');
 
 
 // Target date of today
@@ -56,6 +57,7 @@ function flipOver(){
     if (pairs <= 0){
         done.style.display = 'block';
         clickNr.innerHTML = clicks + " clicks";
+        winMessage()
     }
 }
 
@@ -84,6 +86,20 @@ function windowClose() {
 
 // clicks count display
 clickNr.innerHTML = clicks + " clicks";
+
+function winMessage() {
+    if (clicks >= 30 && clicks <= 50) {
+            winMsg.innerHTML = 'You are either cheating <br> or genius <br> or a KREPSKO member!';
+        } else if (clicks >= 51 && clicks <= 75) {
+            winMsg.innerHTML = 'You are kind of good at this! <br> But you could be better <br> ';
+        } else if (clicks >= 76 && clicks <= 100) {
+            winMsg.innerHTML = 'Not bad! <br> But not good either. <br> You should see some KREPSKO show!';
+        } else if (clicks >= 101 && clicks <= 120) {
+            winMsg.innerHTML = 'Really?! <br> You should definetly see some KREPSKO show <br> and then come back to play again! ';
+        } else if (clicks > 120) {
+            winMsg.innerHTML = 'Are you a tee-too-tuum or what? <br> Try again and better!';
+        }
+}
 
 // Reset - new game
 function reset() {
