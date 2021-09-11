@@ -1,20 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+/* HEADER ------------------- */
 
 #header {
     height: 60px;
     position: relative;
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
-
-.logo {
-    height: 40px;
-    padding-left: 5px;
-    padding-top: 5px;
-}
-
-
 
 #date {
     font-size: 0.8rem;
@@ -31,7 +24,6 @@
 
 #name-input {
     font-size: 1.2rem;
-   
     bottom: 0;
     background-color: rgba(99, 99, 99, 0.2);
     border: none;
@@ -48,6 +40,35 @@
     left: 300px;
 }
 
+/* The opening screen ------------------- */
+#info-msg {
+    font-family: "roboto";
+    font-size: 1.2rem;
+    position: absolute;
+    margin: auto;
+    height: 400px;
+    width: 830px;
+    left: 1%;
+    z-index: 10;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.85);
+    padding-top: 40px;
+}
+
+.happy {
+    font-family: "kelly slab";
+    font-size: 3rem;
+    color: #f0ad4e;
+    text-shadow: 1px 1px rgb(167, 165, 165);
+}
+.opening {
+    left: 35%;
+    font-family: "kelly slab";
+    
+}
+
+
+/* The game field ------------------- */
 .content {
     background-color: rgba(0, 0, 0, 0.363);
     width: 70vw;
@@ -65,7 +86,6 @@ body {
     font-family: "kelly slab";
 }
 
-
 #game-content {
     height: 89vh;
     width: 94%;
@@ -75,7 +95,7 @@ body {
     perspective: 1000px;
 }
 
-
+/* Cards ------------------- */
 .card {
     display: flex;
     margin: 5px;
@@ -108,6 +128,7 @@ body {
     transform: rotateY(180deg);
 }
 
+/* Finish screen ------------------- */
 #done-msg {
     font-size: 1.5rem;
     position: absolute;
@@ -123,38 +144,19 @@ body {
     text-shadow: 2px 3px 2px #000;
 }
 
-#info-msg {
-    font-family: "roboto";
-    font-size: 1.2rem;
-    position: absolute;
-    margin: auto;
-    height: 400px;
-    width: 820px;
-    left: 1%;
-    z-index: 10;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0.85);
-    padding-top: 40px;
-}
-
-.happy {
-    font-family: "kelly slab";
-    font-size: 3rem;
-    color: #f0ad4e;
-}
-.opening {
-    left: 35%;
-    font-family: "kelly slab";
-}
-
-
 .closeit {
     left: 40%;
 }
 
-
+/* The footer ------------------- */
 
 #footer {
     border-top: 1px solid rgba(255,255,255,0.5);
     font-size: 0.8rem;
+}
+
+.logo {
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 5px;
 }
