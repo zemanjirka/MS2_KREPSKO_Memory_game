@@ -93,12 +93,20 @@ function winMessage() {
         } else if (clicks >= 51 && clicks <= 75) {
             winMsg.innerHTML = 'You are kind of good at this! <br> But you could be better <br> ';
         } else if (clicks >= 76 && clicks <= 100) {
-            winMsg.innerHTML = 'Not bad! <br> But not good either. <br> You should see some KREPSKO show!';
+            winMsg.innerHTML = 'Not bad! But not good either. <br> You should see some KREPSKO show! <br> And then come back to play!';
         } else if (clicks >= 101 && clicks <= 120) {
             winMsg.innerHTML = 'Really?! <br> You should definetly see some KREPSKO show <br> and then come back to play again! ';
         } else if (clicks > 120) {
             winMsg.innerHTML = 'Are you a tee-too-tuum or what? <br> Try again and better!';
         }
+}
+
+// Shuffle
+function shuffle() {
+    card.forEach(cards => {
+        let randomPosition = Math.floor(Math.random() * 30);
+        cards.style.order = randomPosition;
+    })
 }
 
 // Reset - new game
