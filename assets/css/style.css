@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
 #header {
@@ -113,6 +114,32 @@ body {
     display: none;
     text-shadow: 2px 3px 2px #000;
 }
+
+#info-msg {
+    font-family: "roboto";
+    font-size: 1.2rem;
+    position: absolute;
+    margin: auto;
+    height: 400px;
+    width: 820px;
+    left: 1%;
+    z-index: 10;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.85);
+    padding-top: 40px;
+}
+
+.happy {
+    font-family: "kelly slab";
+    font-size: 3rem;
+    color: #f0ad4e;
+}
+.opening {
+    left: 35%;
+    font-family: "kelly slab";
+}
+
+
 .closeit {
     left: 40%;
 }
