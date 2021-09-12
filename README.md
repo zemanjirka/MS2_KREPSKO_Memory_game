@@ -14,6 +14,7 @@ KREPSKO is an international theatre group, founded in 2001. So this year KREPSKO
 
 ### User stories:
 - the user should open the page and see a "welcome screen" informing briefly about Krepsko theatre group and its anniversary and describing the game goal - to match all 15 pairs
+- because it is a memory game, it is important to be diplayed/playd on wider screens - so if user open the page on smaller (narrower) screen, user should see a message to open the page on wider (computer) screen
 - the user should see the actual date 
 - the user should see a sign inviting him to enter his name - if he does so, he will be "personally greeted" before the game
 - the user should see a button (Let's do some KREPSKO stuff) that starts the game when clicked
@@ -31,7 +32,41 @@ KREPSKO is an international theatre group, founded in 2001. So this year KREPSKO
 
  > <strong>over 120 clicks: </strong>Are you a tee-too-tuum or what? Try again and better!'
 
+- the user should see a button uder the closing message, that closes the message
+- during all game the user should see a Shuffle button, that can shuffle/restart the game at any point of the game
+
 
 Wireframes created at the very beginning of the process (slightly vary from the final result)
 
 ![wireframes](./assets/images/Wireframe.png)
+
+
+## Features
+
+### Existing Features
+
+- ***Memory Game*** - allows users to click the cards and play with the game
+
+- ***New Game/ Shuffle*** - allows users to start a new game at any point of the game
+
+- ***Player's name*** - allows users to enter his name and receive a personalised greeting
+
+- ***Date*** - player should see actual date on the page
+
+- ***Logo of KREPSKO theatre group*** - with a link to actual home page of the theatre group
+
+### Features Left to Implement
+
+- ***Highscore table***
+
+## Technologies Used
+
+The whole page was built with HTML, CSS and JavaScript 
+
+### Other sources:
+- [Bootstrap] (v5.0x) (https://getbootstrap.com/) For some particular details
+- [GoogleFonts] (https://fonts.google.com/) to use Kelly slab font (this font KREPSKO theatre group uses on its pages)
+- [Git] - Git is used to allow for tracking of any changes in the code and for the version control
+- [GitPod] - GitPod, connected to GitHub, hosted the coding space and allowed the project to be committed to the Github repository.
+- [Github] - GitHub is used to host the project files and publish the live website by using Git Pages
+- [Balsamiq] (https://balsamiq.com/) for creating the wireframes
