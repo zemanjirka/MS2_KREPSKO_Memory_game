@@ -1,4 +1,5 @@
-# MS2 - Memory game celebrating 20 years of existence of international theatre group<img src="./assets/images/krepsko.png" alt="logo krepsko" width="150"/>
+# MS2 - Memory game celebrating 20 years of existence of international theatre group KREPSKO
+<img src="./assets/images/krepsko.png" alt="logo krepsko" width="150"/>
 
 [View the live project here](https://zemanjirka.github.io/MS2_KREPSKO_Memory_game/)
 
@@ -78,4 +79,4 @@ https://validator.w3.org/nu/ ![w3_report](./assets/images/W3validator_check.png)
 
 http://www.css-validator.org/ ![validator_report](./assets/images/JigsawW3validatorSCCcheck.png)
 
-Lighthouse - dev. tools Google Chrome: ![lighthouse_report](./assets/images/Lighhouse_check.png)
+Lighthouse - dev. tools Google Chrome: ![lighthouse_report](./assets/images/Lighthouse_check.png)
