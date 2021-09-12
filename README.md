@@ -70,3 +70,12 @@ The whole page was built with HTML, CSS and JavaScript
 - [GitPod] - GitPod, connected to GitHub, hosted the coding space and allowed the project to be committed to the Github repository.
 - [Github] - GitHub is used to host the project files and publish the live website by using Git Pages
 - [Balsamiq] (https://balsamiq.com/) for creating the wireframes
+
+## Testing 
+
+https://validator.w3.org/nu/ ![w3_report](./assets/images/W3validator_check.png)
+
+
+http://www.css-validator.org/ ![validator_report](./assets/images/JigsawW3validatorSCCcheck.png)
+
+Lighthouse - dev. tools Google Chrome: ![lighthouse_report](./assets/images/Lighhouse_check.png)
